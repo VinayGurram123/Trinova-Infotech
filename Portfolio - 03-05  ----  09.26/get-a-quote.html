@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+
+    <title>Trinova Infotech Get A QUOTE</title>
+
+    <link rel="icon" type="image/x-icon" href="image/Group 5 (1).png">
+</head>
+<body>
+
+    <div id="header"></div>
+
+    <main>
+        <section id="banner-section" class="banner-section">
+            <div class="banner">
+                <div class="container">
+                    <div class="banner-heading">
+                        <h2 class="h1">Get A QUOTE</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="get-form-section" class="get-form-section">
+            <div class="container">
+                <div id="formContainer">
+                    <h2>Get a Quote</h2>
+                    <!-- Success message (hidden initially) -->
+                    <div id="successMessage" style="display: none;">
+                      🎉 Your request has been submitted successfully!
+                    </div>
+                  
+                    <!-- The form -->
+                    <form action="https://formsubmit.co/trinovainfotech@gmail.com" method="POST" target="dummyFrame" onsubmit="handleFormSuccess()" id="quoteForm">
+                      <input type="hidden" name="_captcha" value="false">
+                      <input type="hidden" name="_template" value="box">
+                      
+                      <div class="name-group">
+                        <div class="feild">
+                            <label>First Name:</label>
+                            <input type="text" name="First_name" required>
+                        </div>
+                        <div class="feild">
+                            <label>Last Name:</label>
+                            <input type="text" name="Last_name" required>
+                        </div> 
+                      </div>
+                      
+                      <div class="feild">
+                            <label>Email Address:</label>
+                            <input type="email" name="email" required>
+                      </div>
+                  
+                      <div class="feild">
+                            <label>Number:</label>
+                            <input type="text" name="Number" required>     
+                      </div>
+                      <div class="name-group">
+                        <div class="feild">
+                            <label>Project Type:</label>
+                            <select name="project_type" required>
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="Shopify Development">Shopify Development</option>
+                                <option value="Website Development">Website Development</option>
+                                <option value="UI/UX Design">UI/UX Design</option>
+                            </select>
+                        </div>
+                  
+                        <div class="feild">
+                            <label>Budget Range:</label>
+                            <select name="project_budget" required>
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="200$ to 250$"> 200$ to 250$ </option>
+                                <option value="250$ to 300$"> 250$ to 300$ </option>
+                                <option value="300$ to 350$"> 300$ to 350$ </option>
+                                <option value="350$ to 400$"> 350$ to 400$ </option>
+                                <option value="400$ +"> 400$+ </option>
+                            </select>
+                        </div>
+                      </div>
+            
+                      <div class="feild">
+                            <label>Message:</label>
+                            <textarea name="message" rows="4" required></textarea>
+                      </div>
+                      <input type="submit" value="Submit Request" class="button button-primary" >
+                    </form>
+                  
+                    <!-- Hidden iframe to catch formsubmit redirect -->
+                    <iframe name="dummyFrame" style="display: none;"></iframe>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="./js/swiper.min.js"></script>
+    <script src="./js/style.js"></script>
+    
+    <script>
+        function handleFormSuccess() {
+            setTimeout(() => {
+                document.getElementById("quoteForm").style.display = "none";
+                document.getElementById("successMessage").style.display = "block";
+            }, 1000); // Wait for formsubmit to process
+        }
+    </script>
+
+</body>
+</html>
